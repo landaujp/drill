@@ -60,11 +60,6 @@ class Mokuji
         $this->subject = $subject;
     }
 
-    public function getAllMokuji()
-    {
-        return self::MOKUJI;
-    }
-
     public function getSectionTitle()
     {
         return array_get(self::MOKUJI, $this->section.'.title', null);

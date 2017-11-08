@@ -33,6 +33,7 @@ class ExerciseController extends Controller
 
         return view('layout')
             ->with('h1', $subject)
+            ->with('sections', Mokuji::MOKUJI)
             ->with('content', $html);
     }
 }
