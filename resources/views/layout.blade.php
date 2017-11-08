@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 	<meta charset="utf-8">
-	<title>Let's Study Programing</title>
+	<title>Webプログラミングドリル</title>
 	<meta name="format-detection" content="telephone=no">
 	<meta name="Keywords" content="">
 	<meta name="description" content="">
@@ -23,7 +23,7 @@
 <body>
 	<div class="container-fulid">
 		<div class="row">
-			<div id="side-menu" class="col-sm-3 col-md-2">
+			<div id="side-menu" class="col-sm-4 col-md-3">
 				<p class="link-top"><a href="/">TOP</a></p>
 				<ul class="chapers">
 					@foreach ($sections as $section_key => $section)
@@ -38,7 +38,10 @@
 					@endforeach
 				</ul>
 			</div>
-			<div class="col-sm-9 col-md-10">{!! $content !!}</div>
+			<div class="col-sm-8 col-md-9">
+				<h1>{{ $h1 or 'Webプログラミングドリル'}}</h1>
+				{!! $content !!}
+			</div>
 		</div>
 	</div>
 	<footer>

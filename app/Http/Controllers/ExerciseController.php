@@ -32,7 +32,7 @@ class ExerciseController extends Controller
         $html          = $parser->parse($markdown);
 
         return view('layout')
-            ->with('h1', $subject)
+            ->with('h1', $subject_title)
             ->with('sections', Mokuji::MOKUJI)
             ->with('content', $html);
     }

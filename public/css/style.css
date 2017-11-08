@@ -103,7 +103,7 @@ code.hljs {
 .chapers .titles li a:hover {
   background-color: #dfeef5;
 }
-.arrow{
+/*.arrow{
   position: relative;
   display: inline-block;
   padding: 0 0 0 16px;
@@ -128,7 +128,7 @@ code.hljs {
   border-right: 1px solid #fff;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
-}
+}*/
 
 footer {
   height: 200px;
