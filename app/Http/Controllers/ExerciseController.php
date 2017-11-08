@@ -29,6 +29,8 @@ class ExerciseController extends Controller
         $parser->html5 = true;
         $html          = $parser->parse($markdown);
 
-        return view('layout')->with('content', $html);
+        return view('layout')
+			->with('h1', $subject)
+			->with('content', $html);
     }
 }
