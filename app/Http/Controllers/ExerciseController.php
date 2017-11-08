@@ -30,7 +30,7 @@ class ExerciseController extends Controller
         $html          = $parser->parse($markdown);
 
         return view('layout')
-			->with('h1', $subject)
-			->with('content', $html);
+            ->with('h1', $subject)
+            ->with('content', $html);
     }
 }
