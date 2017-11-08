@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mokuji;
+use cebe\markdown\GithubMarkdown;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
@@ -26,12 +27,13 @@ class ExerciseController extends Controller
         }
 
         $markdown      = file_get_contents($md_file);
-        $parser        = new \cebe\markdown\GithubMarkdown();
+        $parser        = new GithubMarkdown();
         $parser->html5 = true;
         $html          = $parser->parse($markdown);
 
         return view('layout')
             ->with('h1', $subject)
+            ->with('sections', Mokuji::MOKUJI)
             ->with('content', $html);
     }
 }

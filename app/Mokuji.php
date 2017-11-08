@@ -44,8 +44,10 @@ class Mokuji
         'php' => [
             'title' => 'PHPの基礎',
             'subjects' => [
-                'welcome' => 'ブラウザ上にHello Worldを出力する',
-                'welcome' => 'ブラウザ上にHello Worldを出力する',
+                'welcome'    => 'ブラウザ上にHello Worldを出力する',
+                'strlink'    => '文字列連結',
+                'arithmetic' => '四則演算',
+                'increment'  => '加算子/減算子',
             ],
         ]
     ];
@@ -58,11 +60,6 @@ class Mokuji
     {
         $this->section = $section;
         $this->subject = $subject;
-    }
-
-    public function getAllMokuji()
-    {
-        return self::MOKUJI;
     }
 
     public function getSectionTitle()
