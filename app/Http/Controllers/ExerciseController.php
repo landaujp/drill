@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mokuji;
 use Illuminate\Http\Request;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class ExerciseController extends Controller
 {
