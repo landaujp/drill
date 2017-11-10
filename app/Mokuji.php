@@ -52,6 +52,7 @@ class Mokuji
                 'increment'  => '加算子/減算子',
                 'convert'    => '型変換',
                 'boolean'    => '論理値を理解する',
+                'array'      => '配列',
             ],
         ]
     ];
