@@ -45,6 +45,8 @@ class Mokuji
             'title' => 'PHPの基礎',
             'subjects' => [
                 'welcome'    => 'ブラウザ上にHello Worldを出力する',
+                'variable'   => '変数',
+                'data-type'  => '型',
                 'strlink'    => '文字列連結',
                 'arithmetic' => '四則演算',
                 'increment'  => '加算子/減算子',
