@@ -8,8 +8,8 @@ class Mokuji
         'htmlcss' => [
             'title' => 'HTMLとCSSの基礎',
             'subjects' => [
-                'welcome-to-html'      => 'WebサイトのHTMLをDLしてローカルでブラウザで表示',
-                'html-local-file'      => '自分でhtmlファイルを作り簡単なHTMLをブラウザで表示',
+                'welcome-to-html'      => '自分でhtmlファイルを作り簡単なHTMLをブラウザで表示',
+                'dl-html-file'         => 'WebサイトのHTMLをDLしてローカルでブラウザで表示',
                 'various-html'         => 'h1,table,ul,li,div,p,a,img,span,brを使ってHTML書く',
                 'a-tag'                => 'リンクを別タブで開く',
                 'inline-style'         => 'style属性で文字の色と大きさを変更してみる',
@@ -22,8 +22,8 @@ class Mokuji
                 'css-width-height'     => 'widthとheightで幅と高さを指定',
                 'css-bg-color'         => 'background-colorで背景色を表現',
                 'css-bg-image'         => 'background-imageで背景画像を表現',
-                'css-border'           => 'boderで枠線を表現',
-                'html-block-inline'    => 'divとspanを違う背景色にしてdivを5個、spanを10個連続で記述してどのように表示されるか確認する',
+                'css-border'           => 'borderで枠線を表現',
+                'html-block-inline'    => 'ブロック要素とインライン要素',
                 'css-padding'          => 'divの中をテキストで埋めて余白をpaddingを表現',
                 'css-margin'           => 'divの下にdivを作ってmargingを表現',
                 'css-elem-center'      => 'div一つを画面の中央に寄せる',

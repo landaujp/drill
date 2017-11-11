@@ -32,6 +32,9 @@ index.html
 ### 解説
 
 #### widthとheight
+
+![](/img/1/htmlcss-5.png)
+
 widthは要素の横幅、heightは要素の高さを指定するCSSプロパティです。
 それぞれウィズ、ハイトと読みます。
 

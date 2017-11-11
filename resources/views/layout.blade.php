@@ -38,7 +38,7 @@
 					@endforeach
 				</ul>
 			</div>
-			<div class="col-sm-8 col-md-9">
+			<div class="content col-sm-8 col-md-6">
 				<h1>{{ $h1 or 'Webプログラミングドリル'}}</h1>
 				{!! $content !!}
 			</div>
