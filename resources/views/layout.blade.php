@@ -41,6 +41,14 @@
 			<div class="content col-sm-8 col-md-6">
 				<h1>{{ $h1 or 'Webプログラミングドリル'}}</h1>
 				{!! $content !!}
+				<div class="content-footer">
+					@if (!is_null($prev_url))
+					<p class="prev"><a href="{{ $prev_url }}">&laquo; {{ $prev_title }}</a></p>
+					@endif
+					@if (!is_null($next_url))
+					<p class="next"><a href="{{ $next_url }}">{{ $next_title }} &raquo;</a></p>
+					@endif
+				</div>
 			</div>
 		</div>
 	</div>

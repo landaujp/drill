@@ -146,7 +146,11 @@ iframe {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }*/
-
+.content-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
 footer {
   height: 200px;
 }

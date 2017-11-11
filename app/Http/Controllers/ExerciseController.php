@@ -14,9 +14,9 @@ class ExerciseController extends Controller
         $section  = urldecode($section);
         $subject  = urldecode($subject);
 
-        $mokuji        = new Mokuji($section, $subject);
-        $section_title = $mokuji->getSectionTitle();
-        $subject_title = $mokuji->getSubjectTitle();
+        $mokuji        = new Mokuji();
+        $section_title = $mokuji->getSectionTitle($section);
+        $subject_title = $mokuji->getSubjectTitle($section, $subject);
         if (is_null($subject_title)) {
             throw new NotFoundHttpException("404 Not Found");
         }
@@ -31,9 +31,20 @@ class ExerciseController extends Controller
         $parser->html5 = true;
         $html          = $parser->parse($markdown);
 
+        list($prev_section,$prev_subject) = $mokuji->getPrevSectionAndSubjec($section, $subject);
+        $prev_url = !is_null($prev_subject) ? "/$prev_section/$prev_subject/" : null;;
+        $prev_title = $mokuji->getSubjectTitle($prev_section,$prev_subject);
+        list($next_section,$next_subject) = $mokuji->getNextSectionAndSubjec($section, $subject);
+        $next_url = !is_null($next_subject) ? "/$next_section/$next_subject/" : null;;
+        $next_title = $mokuji->getSubjectTitle($next_section,$next_subject);
+
         return view('layout')
             ->with('h1', $subject_title)
             ->with('sections', Mokuji::MOKUJI)
-            ->with('content', $html);
+            ->with('content', $html)
+            ->with('prev_url', $prev_url)
+            ->with('prev_title', $prev_title)
+            ->with('next_url', $next_url)
+            ->with('next_title', $next_title);
     }
 }
