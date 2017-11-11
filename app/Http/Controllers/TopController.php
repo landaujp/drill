@@ -10,7 +10,7 @@ class TopController extends Controller
     public function index()
     {
         return view('layout')
-            ->with('mokuji', Mokuji::MOKUJI);
+            ->with('sections', Mokuji::MOKUJI)
             ->with('content', "ようこそ〜");
     }
 }
