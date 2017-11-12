@@ -19,6 +19,24 @@
 	<link href="/css/style.css" rel="stylesheet"></link>
 	<!-- <script src="/js/syntaxhighlighter.js"></script> -->
 
+	
+	<link href="/css/codemirror.css" rel="stylesheet"></link>
+	<script src="/js/codemirror/lib/codemirror.js"></script>
+	<script src="/js/codemirror/lib/codemirror-emmet.js"></script>
+
+	<script src="/js/codemirror/addon/hint/show-hint.js"></script>
+	<script src="/js/codemirror/addon/hint/xml-hint.js"></script>
+	<script src="/js/codemirror/addon/hint/html-hint.js"></script>
+	<script src="/js/codemirror/addon/hint/css-hint.js"></script>
+	<script src="/js/codemirror/addon/edit/matchbrackets.js"></script>
+	<script src="/js/codemirror/addon/edit/closetag.js"></script>
+	<script src="/js/codemirror/addon/fold/xml-fold.js"></script>
+
+	<script src="/js/codemirror/mode/xml/xml.js"></script>
+	<script src="/js/codemirror/mode/javascript/javascript.js"></script>
+	<script src="/js/codemirror/mode/css/css.js"></script>
+	<script src="/js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+
 </head>
 <body>
 	<div class="container-fulid">
