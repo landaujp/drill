@@ -7,7 +7,7 @@ divタグに対して赤色の背景色を設定してください。
 style.css
 
 ```css
-div {    
+div {
     background-color: red;
 }
 ```

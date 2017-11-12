@@ -9,20 +9,20 @@
   padding-left:0px;
 }*/
 html,body {
-  background-color: #fcfcfc;
   height:100%;
   font-size:16px;
   font-family: Avenir, "Helvetica Neue", Helvetica, Arial, Verdana, Roboto, "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
-  color: #3e4d54;
+  color: #34495e;
 }
 
 /* h* */
 h1, h2, h3, h4, h5, h6 {
 	margin: 40px 0 10px;
-	border-left: 5px solid #35acda;
-	padding-left: 8px;
+	/*border-left: 5px solid #35acda;*/
+	/*padding-left: 8px;*/
   border-bottom:none;
   font-weight: bold;
+  color: #2c3e50;
 }
 h1 {
   margin-top: 0;
@@ -32,14 +32,21 @@ h1 {
   padding: 9px;
 }
 h2 {
-  border-bottom: 1px dashed #35acda;
+  padding-bottom: 0.7em;
+  border-bottom: 1px solid #ddd;
 }
-p {
-  font-size:16px;
-  line-height: 2;
+.content p,
+.content ul,
+.content ol {
+  font-size:15px;
+  line-height: 1.6em;
+  margin: 1.2em 0 -1.2em;
+  padding-bottom: 1.2em;
+  position: relative;
+  z-index: 1;
 }
-img {
-  max-width: 60%;
+p img {
+  max-width: 50%;
 }
 pre {
   padding: 0;
@@ -52,7 +59,9 @@ code {
 code.hljs {
   padding:1em;
 }
-
+iframe {
+  display: block;
+}
 .article-header .mtime{
   margin: 0;
   font-size: 12px;
@@ -106,6 +115,7 @@ code.hljs {
   border-bottom: 1px dashed #f1f1f1;
   min-height: 3.5em;
   color: #4183C4;
+  font-size: 13px;
 }
 .chapers .titles li a:hover {
   background-color: #dfeef5;
@@ -136,7 +146,11 @@ code.hljs {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }*/
-
+.content-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
 footer {
   height: 200px;
 }

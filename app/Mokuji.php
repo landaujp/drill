@@ -8,8 +8,8 @@ class Mokuji
         'htmlcss' => [
             'title' => 'HTMLとCSSの基礎',
             'subjects' => [
-                'welcome-to-html'      => 'WebサイトのHTMLをDLしてローカルでブラウザで表示',
-                'html-local-file'      => '自分でhtmlファイルを作り簡単なHTMLをブラウザで表示',
+                'welcome-to-html'      => '自分でhtmlファイルを作り簡単なHTMLをブラウザで表示',
+                'dl-html-file'         => 'WebサイトのHTMLをDLしてローカルでブラウザで表示',
                 'various-html'         => 'h1,table,ul,li,div,p,a,img,span,brを使ってHTML書く',
                 'a-tag'                => 'リンクを別タブで開く',
                 'inline-style'         => 'style属性で文字の色と大きさを変更してみる',
@@ -22,8 +22,8 @@ class Mokuji
                 'css-width-height'     => 'widthとheightで幅と高さを指定',
                 'css-bg-color'         => 'background-colorで背景色を表現',
                 'css-bg-image'         => 'background-imageで背景画像を表現',
-                'css-border'           => 'boderで枠線を表現',
-                'html-block-inline'    => 'divとspanを違う背景色にしてdivを5個、spanを10個連続で記述してどのように表示されるか確認する',
+                'css-border'           => 'borderで枠線を表現',
+                'html-block-inline'    => 'ブロック要素とインライン要素',
                 'css-padding'          => 'divの中をテキストで埋めて余白をpaddingを表現',
                 'css-margin'           => 'divの下にdivを作ってmargingを表現',
                 'css-elem-center'      => 'div一つを画面の中央に寄せる',
@@ -58,28 +58,53 @@ class Mokuji
         ],
     ];
 
-    private $section;
-
-    private $subject;
-
-    public function __construct($section, $subject)
+    public function getSectionTitle($section)
     {
-        $this->section = $section;
-        $this->subject = $subject;
+        return array_get(self::MOKUJI, $section.'.title', null);
     }
 
-    public function getSectionTitle()
+    public function getSubjects($section)
     {
-        return array_get(self::MOKUJI, $this->section.'.title', null);
+        return array_get(self::MOKUJI, $section.'.subjects', null);
     }
 
-    public function getSubjects()
+    public function getSubjectTitle($section,$subject)
     {
-        return array_get(self::MOKUJI, $this->section.'.subjects', null);
+        return array_get(self::MOKUJI, $section.'.subjects.'.$subject, null);
     }
 
-    public function getSubjectTitle()
+    public function getNextSectionAndSubjec($section,$subject)
     {
-        return array_get(self::MOKUJI, $this->section.'.subjects.'.$this->subject, null);
+        $hit = null;
+        foreach ( self::MOKUJI as $sec => $val ) {
+
+            if ( is_null($hit) && $sec !== $section ) continue;
+
+            foreach ( $val['subjects'] as $sub => $sub_title) {
+                if ( is_null($hit) && $sub !== $subject ) continue;
+
+                if ( !is_null($hit) ) {
+                    return [$sec,$sub];
+                }
+                $hit = true;
+            }
+        }
+        return null;
+    }
+
+    public function getPrevSectionAndSubjec($section,$subject)
+    {
+        $hit = null;
+        foreach ( self::MOKUJI as $sec => $val ) {
+
+            foreach ( $val['subjects'] as $sub => $sub_title) {
+                if ( $sub !== $subject ) {
+                    $hit = [$sec,$sub];
+                } else {
+                    break 2;
+                }
+            }
+        }
+        return $hit;
     }
 }
