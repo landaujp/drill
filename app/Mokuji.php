@@ -68,22 +68,25 @@ class Mokuji
         return array_get(self::MOKUJI, $section.'.subjects', null);
     }
 
-    public function getSubjectTitle($section,$subject)
+    public function getSubjectTitle($section, $subject)
     {
         return array_get(self::MOKUJI, $section.'.subjects.'.$subject, null);
     }
 
-    public function getNextSectionAndSubjec($section,$subject)
+    public function getNextSectionAndSubjec($section, $subject)
     {
         $hit = null;
-        foreach ( self::MOKUJI as $sec => $val ) {
+        foreach (self::MOKUJI as $sec => $val) {
+            if (is_null($hit) && $sec !== $section) {
+                continue;
+            }
 
-            if ( is_null($hit) && $sec !== $section ) continue;
+            foreach ($val['subjects'] as $sub => $sub_title) {
+                if (is_null($hit) && $sub !== $subject) {
+                    continue;
+                }
 
-            foreach ( $val['subjects'] as $sub => $sub_title) {
-                if ( is_null($hit) && $sub !== $subject ) continue;
-
-                if ( !is_null($hit) ) {
+                if (!is_null($hit)) {
                     return [$sec,$sub];
                 }
                 $hit = true;
@@ -92,13 +95,12 @@ class Mokuji
         return null;
     }
 
-    public function getPrevSectionAndSubjec($section,$subject)
+    public function getPrevSectionAndSubjec($section, $subject)
     {
         $hit = null;
-        foreach ( self::MOKUJI as $sec => $val ) {
-
-            foreach ( $val['subjects'] as $sub => $sub_title) {
-                if ( $sub !== $subject ) {
+        foreach (self::MOKUJI as $sec => $val) {
+            foreach ($val['subjects'] as $sub => $sub_title) {
+                if ($sub !== $subject) {
                     $hit = [$sec,$sub];
                 } else {
                     break 2;
