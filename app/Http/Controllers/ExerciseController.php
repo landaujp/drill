@@ -31,12 +31,12 @@ class ExerciseController extends Controller
         $parser->html5 = true;
         $html          = $parser->parse($markdown);
 
-        list($prev_section,$prev_subject) = $mokuji->getPrevSectionAndSubjec($section, $subject);
-        $prev_url = !is_null($prev_subject) ? "/$prev_section/$prev_subject/" : null;;
-        $prev_title = $mokuji->getSubjectTitle($prev_section,$prev_subject);
-        list($next_section,$next_subject) = $mokuji->getNextSectionAndSubjec($section, $subject);
-        $next_url = !is_null($next_subject) ? "/$next_section/$next_subject/" : null;;
-        $next_title = $mokuji->getSubjectTitle($next_section,$next_subject);
+        list($prev_section, $prev_subject) = $mokuji->getPrevSectionAndSubjec($section, $subject);
+        $prev_url   = !is_null($prev_subject) ? "/$prev_section/$prev_subject/" : null;
+        $prev_title = $mokuji->getSubjectTitle($prev_section, $prev_subject);
+        list($next_section, $next_subject) = $mokuji->getNextSectionAndSubjec($section, $subject);
+        $next_url   = !is_null($next_subject) ? "/$next_section/$next_subject/" : null;
+        $next_title = $mokuji->getSubjectTitle($next_section, $next_subject);
 
         return view('layout')
             ->with('h1', $subject_title)
