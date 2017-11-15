@@ -1,9 +1,23 @@
 ## 例題
 
 ### 問
-pタグで囲まれたテキストの
+テキストを含んだpタグの要素に上下左右10pxのpaddingを設定してください。
+ただし、横幅が100pxと赤色の枠線を追加して下さい。
+また、paddingが無いpも作ってみて違いを確認してください。
 
 ### 解答
+style.css
+```css
+p {
+	width: 100px;
+	border: 1px solid red;
+}
+.style1 {
+	
+	padding: 10px;
+}
+```
+
 ```html
 <!DOCTYPE html>
 <html lang="ja">
@@ -12,39 +26,42 @@ pタグで囲まれたテキストの
 <meta charset="utf-8">
 </head>
 <body>
-<!-- 元のpタグ-->
-<p>style属性で文字の色と大きさを変更してみる</p>
 
-<!-- 解答例 -->
-<p style="color:blue;font-size:15px;">style属性で文字の色と大きさを変更してみる</p>
+<p class="style1">テキストがたっぷり入ってます。テキストがたっぷり入ってます。テキストがたっぷり入ってます。テキストがたっぷり入ってます。</p>
+<p class="style2">テキストがたっぷり入ってます。テキストがたっぷり入ってます。テキストがたっぷり入ってます。テキストがたっぷり入ってます。</p>
+
 </body>
 </html>
 ```
 
+<iframe width="100%" height="600" src="//jsfiddle.net/dnyektca/embedded/result,html,css/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
 ### 解説
 
-#### CSSとは
-ページの内容や構成を表現する**HTML**に対して、文章の装飾を表現する**CSS**というものがあります。  
-CSSは `[プロパティ]:[値];` という形をしています。  
-上の例でも`color : blue;`や`font-size:15px;`となっています。
+#### padding
+CSSのプロパティの一つで要素の「内側」に**スペース**を設定できます。
 
-プロパティが変更する種別で、値が変更する量やタイプになります。  
-color (文字の色を) : blue (青に) ;  
-font-size (文字の大きさを) : 15px (15pxに) ;  
-と言った具合です。
+#### 上下左右別々に設定できます
+`padding:10px`だと全方向10pxのスペースができますが、それぞれ個別に設定できます。
 
-一つのプロパティ+値の組の最後には必ず「;(セミコロン)」をつけます。
-
-#### style属性
-htmlタグにはstyle属性をつけることができ、値にCSSを記述できます。CSSの記述は「”(ダブルクォーテーション)」で囲みます。  
-`<p style="[CSSの記述]">テキスト</p>`
+```css
+p {
+	padding-top: 10px; /* 上のみ設定 */
+	padding-right: 10px; /*　右のみ設定　*/
+	padding-bottom: 10px; /* 下のみ設定 */
+	padding-left: 10px; /* 左のみ設定 */
+}
+```
 
 ## 課題
 
 ### 問
-以下のpタグのテキストの文字の色を赤に、文字の大きさを30pxにしてください。
+テキストを含んだdivタグ要素に**上下10px、左右20px**のpaddingを設定してください。
+ただし、divタグに横幅が300pxと赤色の枠線を追加して下さい。
 
 ### 解答
+
+index.html
 ```html
 <!DOCTYPE html>
 <html lang="ja">
@@ -53,12 +70,35 @@ htmlタグにはstyle属性をつけることができ、値にCSSを記述で�
 <meta charset="utf-8">
 </head>
 <body>
-<!-- 元のpタグ-->
-<p>style属性で文字の色と大きさを変更してみる</p>
 
 <!-- あなたの解答-->
-
+<div>テキストでいっぱいです。テキストでいっぱいです。テキストでいっぱいです。テキストでいっぱいです。テキストでいっぱいです。</div>
 
 </body>
 </html>
 ```
+
+style.css
+
+```css
+div {
+
+}
+
+```
+
+<script language="heredocument" id="default_html">
+<!-- あなたの解答-->
+<div>テキストでいっぱいです。テキストでいっぱいです。テキストでいっぱいです。テキストでいっぱいです。テキストでいっぱいです。</div>
+</script>
+<script>
+var default_html = document.getElementById("default_html").text;
+</script>
+
+<script language="heredocument" id="default_css">
+div {
+}
+</script>
+<script>
+var default_css = document.getElementById("default_css").text;
+</script>
