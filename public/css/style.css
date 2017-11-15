@@ -154,3 +154,43 @@ iframe {
 footer {
   height: 200px;
 }
+
+/* html realtime editor */
+#edit-wrapper {
+  overflow:hidden;
+}
+#edit-wrapper p.heding {
+  margin: 5px 0;
+  font-size: 15px;
+  padding: 2px 8px 0px;
+  background-color: #6cdcef;
+  display: inline-block;
+  border-radius: 2px;
+  font-size: 12px;
+  color: #FFF;
+}
+#edit-wrapper   iframe {
+    width: 49.5%;
+    height: 100%;
+    border:1px solid #eaeaea;
+    box-sizing: border-box;
+    min-height: 642px;
+    position: relative;
+    top: 31px;
+    float: right;
+  }
+  #edit-box {
+    width: 50%;
+    float: left;
+  }
+  #edit-box textarea {
+    width: 100%;
+  }
+.CodeMirror {
+  border: 1px solid #eaeaea;
+  border-radius: 2px;
+
+}
+.CodeMirror-sizer {
+  font-size: 13px;
+}

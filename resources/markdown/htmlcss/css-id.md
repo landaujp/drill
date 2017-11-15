@@ -96,3 +96,18 @@ index.html
 </body>
 </html>
 ```
+
+<script language="heredocument" id="default_html">
+<!-- pタグにidを付与してCSSを適応してください -->
+<p>style属性で文字の色と大きさを変更してみる</p>
+</script>
+<script>
+var default_html = document.getElementById("default_html").text;
+</script>
+
+<script language="heredocument" id="default_css">
+/\* subject idの記述 \*/
+</script>
+<script>
+var default_css = document.getElementById("default_css").text;
+</script>

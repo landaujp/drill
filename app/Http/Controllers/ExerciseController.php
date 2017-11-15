@@ -42,9 +42,13 @@ class ExerciseController extends Controller
             ->with('h1', $subject_title)
             ->with('sections', Mokuji::MOKUJI)
             ->with('content', $html)
-            ->with('prev_url', $prev_url)
-            ->with('prev_title', $prev_title)
-            ->with('next_url', $next_url)
-            ->with('next_title', $next_title);
+            ->with('content', view('article')
+                ->with('article', $html)
+                ->with('editor', view('htmleditor'))
+                ->with('prev_url', $prev_url)
+                ->with('prev_title', $prev_title)
+                ->with('next_url', $next_url)
+                ->with('next_title', $next_title)
+            );
     }
 }

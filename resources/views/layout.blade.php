@@ -19,7 +19,7 @@
 	<link href="/css/style.css" rel="stylesheet"></link>
 	<!-- <script src="/js/syntaxhighlighter.js"></script> -->
 
-	
+
 	<link href="/css/codemirror.css" rel="stylesheet"></link>
 	<script src="/js/codemirror/lib/codemirror.js"></script>
 	<script src="/js/codemirror/lib/codemirror-emmet.js"></script>
@@ -36,6 +36,8 @@
 	<script src="/js/codemirror/mode/javascript/javascript.js"></script>
 	<script src="/js/codemirror/mode/css/css.js"></script>
 	<script src="/js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
 <body>
@@ -56,24 +58,15 @@
 					@endforeach
 				</ul>
 			</div>
-			<div class="content col-sm-8 col-md-6">
+			<div class="content col-sm-8 col-md-9">
 				<h1>{{ $h1 or 'Webプログラミングドリル'}}</h1>
 				{!! $content !!}
-				<div class="content-footer">
-					@if (!is_null($prev_url))
-					<p class="prev"><a href="{{ $prev_url }}">&laquo; {{ $prev_title }}</a></p>
-					@endif
-					@if (!is_null($next_url))
-					<p class="next"><a href="{{ $next_url }}">{{ $next_title }} &raquo;</a></p>
-					@endif
-				</div>
 			</div>
 		</div>
 	</div>
 	<footer>
 
 	</footer>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 	<script>hljs.initHighlightingOnLoad();</script>

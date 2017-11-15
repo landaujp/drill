@@ -86,3 +86,18 @@ index.html
 </body>
 </html>
 ```
+
+<script language="heredocument" id="default_html">
+<!-- pタグにクラスを付与してください -->
+<p>style属性で文字の色と大きさを変更してみる</p>
+</script>
+<script>
+var default_html = document.getElementById("default_html").text;
+</script>
+
+<script language="heredocument" id="default_css">
+/\* blue-textクラスの記述 \*/
+</script>
+<script>
+var default_css = document.getElementById("default_css").text;
+</script>
