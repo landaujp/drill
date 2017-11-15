@@ -38,13 +38,17 @@ class ExerciseController extends Controller
         $next_url   = !is_null($next_subject) ? "/$next_section/$next_subject/" : null;
         $next_title = $mokuji->getSubjectTitle($next_section, $next_subject);
 
+        $editor = null;
+        if ($section == 'htmlcss') {
+            $editor = view('htmleditor');
+        }
         return view('layout')
             ->with('h1', $subject_title)
             ->with('sections', Mokuji::MOKUJI)
             ->with('content', $html)
             ->with('content', view('article')
                 ->with('article', $html)
-                ->with('editor', view('htmleditor'))
+                ->with('editor', $editor)
                 ->with('prev_url', $prev_url)
                 ->with('prev_title', $prev_title)
                 ->with('next_url', $next_url)
