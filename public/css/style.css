@@ -80,6 +80,20 @@ iframe {
 }
 #side-menu .chapter {
   cursor: pointer;
+  position: relative;
+}
+#side-menu .chapter::after {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(135deg);
+  top: 14px;
+  right: 11px;
 }
 #side-menu ul.titles {
   display: none;

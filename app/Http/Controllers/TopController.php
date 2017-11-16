@@ -11,6 +11,8 @@ class TopController extends Controller
     {
         return view('layout')
             ->with('sections', Mokuji::MOKUJI)
+            ->with('current_section', "")
+            ->with('current_subject', "")
             ->with('content', "ようこそ〜");
     }
 }
