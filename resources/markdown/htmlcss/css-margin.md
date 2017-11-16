@@ -1,15 +1,15 @@
 ## 例題
 
 ### 問
-縦横300px、枠線赤色のdiv要素を２作って下さい。
+縦横100px、枠線赤色のdiv要素を２作って下さい。
 そのdivに上下左右masrginを20px設定してください。
 
 ### 解答
 style.css
 ```css
 div {
-	width: 300px;
-	height: 300px;
+	width: 100px;
+	height: 100px;
 	border: 1px solid red;
 	margin: 20px;
 }
@@ -55,8 +55,8 @@ p {
 ## 課題
 
 ### 問
-テキストを含んだdivタグ要素に**上下10px、左右20px**のpaddingを設定してください。
-ただし、divタグに横幅が300pxと赤色の枠線を追加して下さい。
+縦横100px、背景色が赤色のdiv要素を２作って下さい。
+そのdivに上下30px、左右10pxのmarginを設定してください。
 
 ### 解答
 
@@ -71,7 +71,7 @@ index.html
 <body>
 
 <!-- あなたの解答-->
-<div>テキストでいっぱいです。テキストでいっぱいです。テキストでいっぱいです。テキストでいっぱいです。テキストでいっぱいです。</div>
+<div></div><div></div>
 
 </body>
 </html>
@@ -88,7 +88,7 @@ div {
 
 <script language="heredocument" id="default_html">
 <!-- あなたの解答-->
-<div>テキストでいっぱいです。テキストでいっぱいです。テキストでいっぱいです。テキストでいっぱいです。テキストでいっぱいです。</div>
+<div></div><div></div>
 </script>
 <script>
 var default_html = document.getElementById("default_html").text;
