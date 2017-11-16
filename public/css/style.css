@@ -78,6 +78,9 @@ iframe {
   padding:0;
   margin: 0;
 }
+#side-menu .chapter {
+  cursor: pointer;
+}
 #side-menu ul.titles {
   display: none;
 }
