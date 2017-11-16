@@ -47,26 +47,3 @@ echo $a; // world
 ## 課題
 ### 問
 `Hello World`を代入した変数`$a`と自分の名前を代入すた変数`$b`を定義し、HTMLの中に埋め込んで表示しましょう。
-
-### 解答
-```php
-<?php
-
-$a = 'Hello World';
-$b = 'レフ・ダヴィドヴィッチ・ランダウ';
-
-?>
-
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<title>PHP</title>
-<meta charset="utf-8">
-</head>
-<body>
-<?php echo $a; ?>
-<?php echo $b; ?>
-</body>
-</html>
-
-```

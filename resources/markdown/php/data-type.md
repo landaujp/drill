@@ -106,73 +106,14 @@ var_dump($g); // NULL
 ### 問1
 文字列型の変数を3種類定義して`var_dump`で出力して型を確認してみましょう。
 
-### 解答
-```php
-<?php
-
-$str1 = 'りんご';
-var_dump($str1);
-$str2 = 'みかん';
-var_dump($str2);
-$str3 = 'ぶどう';
-var_dump($str3);
-
-```
-
 ### 問2
 整数型の変数を3種類定義して`var_dump`で出力して型を確認してみましょう。
-
-### 解答
-```php
-<?php
-
-$int1 = 1;
-var_dump($int1);
-$int2 = 123;
-var_dump($int2);
-$int3 = -45;
-var_dump($int3);
-
-```
 
 ### 問3
 浮動小数点数型の変数を3種類定義して`var_dump`で出力して型を確認してみましょう。
 
-### 解答
-```php
-<?php
-
-$float1 = 12.0;
-var_dump($float1);
-$float2 = 0.123;
-var_dump($float2);
-$float3 = -32.45;
-var_dump($float3);
-
-```
-
 ### 問4
 論理値型の変数を2種類定義して`var_dump`で出力して型を確認してみましょう。
 
-### 解答
-```php
-<?php
-
-$bool1 = true;
-var_dump($bool1);
-$bool2 = false;
-var_dump($bool2);
-
-```
-
 ### 問5
 NULL型の変数を1種類定義して`var_dump`で出力して型を確認してみましょう。
-
-### 解答
-```php
-<?php
-
-$null = NULL;
-var_dump($null);
-
-```

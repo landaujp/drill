@@ -61,14 +61,3 @@ echo gettype($a); // string
 ## 課題
 ### 問
 文字列の`'0.0'`を整数、浮動小数点数、論理値に型変換し、どうなるか確認しましょう。
-
-### 解答
-```php
-<?php
-
-$a = '0';
-
-echo (int) $a;
-echo (float) $a;
-echo (bool) $a;
-```

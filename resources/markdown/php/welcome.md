@@ -43,18 +43,3 @@ PHPは`<?php`で書き始め、`?>`で終わります。このタグで囲まれ
 
 ### 問5
 例題のコードを使ってブラウザ上に今日の日付を表示してみましょう。
-
-### 解答例
-```html
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<title>はじめてのPHP</title>
-<meta charset="utf-8">
-</head>
-<body>
-私の名前は<?php echo 'レフ・ダヴィドヴィッチ・ランダウ'; ?>です。
-</body>
-</html>
-
-```
