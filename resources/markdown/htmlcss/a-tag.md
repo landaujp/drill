@@ -25,20 +25,13 @@ target属性に`_blank`を指定すると、そのリンク先のページをブ
 ```
 
 
-<script language="heredocument" id="default_html">
-<div>
-  <p>hoge</p>
-</div>
+<script language="heredocument" id="default_html"><!-- 別タブでyahoo.co.jpが開くようなリンクを表示してください -->
 </script>
 <script>
 var default_html = document.getElementById("default_html").text;
 </script>
 
-<script language="heredocument" id="default_css">
-a {
-  border:1px solid red;
-}
-</script>
+<script language="heredocument" id="default_css"></script>
 <script>
 var default_css = document.getElementById("default_css").text;
 </script>
