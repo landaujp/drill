@@ -51,7 +51,6 @@ class Mokuji
                 'arithmetic'        => '四則演算',
                 'increment'         => '加算子/減算子',
                 'array'             => '配列',
-                'associative-array' => '連想配列',
                 'convert'           => '型変換',
                 'boolean'           => '論理値を理解する',
             ],
