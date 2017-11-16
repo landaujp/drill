@@ -56,6 +56,7 @@ class Mokuji
                 'for'        => 'for',
                 'while'      => 'while',
                 'foreach'    => 'foreach',
+                'if'         => 'if',
             ],
         ],
     ];
