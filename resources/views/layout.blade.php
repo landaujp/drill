@@ -38,6 +38,7 @@
 	<script src="/js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="/js/mokuji.js"></script>
 
 </head>
 <body>
@@ -45,13 +46,13 @@
 		<div class="row">
 			<div id="side-menu" class="col-sm-4 col-md-3">
 				<p class="link-top"><a href="/">TOP</a></p>
-				<ul class="chapers">
+				<ul class="chapters">
 					@foreach ($sections as $section_key => $section)
 						<li>
-							<p class="chaper">{{$loop->iteration}}.{{$section['title']}}</p>
-							<ul class="titles">
+							<p class="chapter @if ($section_key == $current_section)active @endif">{{$loop->iteration}}.{{$section['title']}}</p>
+							<ul class="titles @if ($section_key == $current_section)active @endif">
 								@foreach ($section['subjects'] as $subject_key => $subject)
-									<li><a class="arrow ku-arrow" href="/{{$section_key}}/{{$subject_key}}">{{$loop->parent->iteration}}-{{$loop->iteration}}. {{$subject}}</a></li>
+									<li class="@if ($subject_key == $current_subject)active @endif"><a class="arrow ku-arrow" href="/{{$section_key}}/{{$subject_key}}">{{$loop->parent->iteration}}-{{$loop->iteration}}. {{$subject}}</a></li>
 								@endforeach
 							</ul>
 						</li>

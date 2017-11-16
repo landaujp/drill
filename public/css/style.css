@@ -78,6 +78,16 @@ iframe {
   padding:0;
   margin: 0;
 }
+#side-menu ul.titles {
+  display: none;
+}
+#side-menu ul.titles.active {
+  display: block;
+}
+#side-menu .titles li.active a{
+  font-weight: bold;
+  font-size: 14px;
+}
 .link-top {
   margin: 0;
 }
@@ -91,19 +101,19 @@ iframe {
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
 }
-.chapers {
+.chapters {
   margin: 0;
 }
-.chapers > li > p {
+.chapters > li > p {
   background-color: #bdd3dc;
   padding: 10px;
   margin: 0;
   font-weight: bold;
 }
-.chapers .titles {
+.chapters .titles {
   margin: 0;
 }
-.chapers .titles li a {
+.chapters .titles li a {
   /*background-color: #e0edf3;*/
   display: inline-block;
   display: flex;
@@ -117,7 +127,7 @@ iframe {
   color: #4183C4;
   font-size: 13px;
 }
-.chapers .titles li a:hover {
+.chapters .titles li a:hover {
   background-color: #dfeef5;
 }
 /*.arrow{
