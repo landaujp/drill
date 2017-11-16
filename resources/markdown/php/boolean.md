@@ -47,19 +47,3 @@ var_dump((bool) $g); // true
 ### 問
 論理型に変換してfalseになる変数を以下の変数を4種類定義し、  
 型変換して確認しましょう。
-
-### 解答
-```php
-<?php
-
-$a = '';
-$b = 0;
-$c = 0.0;
-$d = NULL;
-
-var_dump((bool) $a);
-var_dump((bool) $b);
-var_dump((bool) $c);
-var_dump((bool) $d);
-
-```
