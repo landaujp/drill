@@ -118,9 +118,8 @@ div {
 var default_html = document.getElementById("default_html").text;
 </script>
 
-<script language="heredocument" id="default_css">
+<script language="heredocument" id="default_css">/\* あなたの解答 \*/
 div {
-
 }
 </script>
 <script>

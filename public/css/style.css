@@ -224,3 +224,21 @@ footer {
 .CodeMirror-sizer {
   font-size: 13px;
 }
+#editor_html {
+  position: relative;
+}
+#editor_css {
+  position: relative;
+}
+.textarea-rest {
+  position: absolute;
+  z-index: 1;
+  top: 6px;
+  right: 1px;
+  background-color: #ccc;
+  font-size: 10px;
+  padding: 2px 3px;
+  border-radius: 2px;
+  color: #FFF;
+  cursor: pointer;
+}
