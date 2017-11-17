@@ -62,6 +62,7 @@ class Mokuji
                 'fizbuz'      => 'FizBuz',
                 'maxfunction' => '配列からキーが最大の値を取得する関数作成',
                 'matrix'      => 'A〜Z x 1〜10の表作成',
+                'form'        => 'お問い合わせフォーム作成',
             ],
         ],
     ];
