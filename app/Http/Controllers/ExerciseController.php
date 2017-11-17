@@ -43,6 +43,7 @@ class ExerciseController extends Controller
             $editor = view('htmleditor');
         }
         return view('layout')
+            ->with('title', $subject_title." | ")
             ->with('h1', $subject_title)
             ->with('sections', Mokuji::MOKUJI)
             ->with('current_section', $section)

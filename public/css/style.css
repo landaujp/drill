@@ -35,6 +35,9 @@ h2 {
   padding-bottom: 0.7em;
   border-bottom: 1px solid #ddd;
 }
+h4 {
+  margin-top:20px;
+}
 .content p,
 .content ul,
 .content ol {

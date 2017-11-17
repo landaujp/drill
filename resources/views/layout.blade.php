@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 	<meta charset="utf-8">
-	<title>Webプログラミングドリル</title>
+	<title>{{ $title or '' }}Webプログラミングドリル</title>
 	<meta name="format-detection" content="telephone=no">
 	<meta name="Keywords" content="">
 	<meta name="description" content="">
