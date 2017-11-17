@@ -57,6 +57,8 @@ class Mokuji
                 'while'      => 'while',
                 'foreach'    => 'foreach',
                 'if'         => 'if',
+                'ternary'    => '三項演算子',
+                'function'   => '関数',
             ],
         ],
     ];
