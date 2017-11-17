@@ -13,7 +13,7 @@ function hello() {
 次の関数を使って`Hello 〇〇`と表示してみましょう。
 ```php
 
-function ok($name) {
+function hello($name) {
     return 'Hello '.$name;
 }
 
