@@ -31,7 +31,7 @@ class Mokuji
                 'display-none'         => 'display:noneで要素を非表示にする',
                 'block-to-inline'      => 'ブロック要素をinline化して表現が変わることを確認する',
                 'inline-to-block'      => 'インライン要素をblock化して表現が変わることを確認する',
-                'side-by-side-float'   => '要素を横並びにする floatで編',
+                'side-by-side-float'   => '要素を横並びにする float編',
                 'side-by-side-inline'  => '要素を横並びにする display:inline-block編',
                 'double-in-centerbox'  => '中央に寄せた要素の中に横並びの要素２つを表現',
                 'triple-in-centerbox'  => '中央に寄せた要素の中に横並びの要素３つを表現',

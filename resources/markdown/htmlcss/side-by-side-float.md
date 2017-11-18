@@ -117,10 +117,10 @@ p {
 
 <script language="heredocument" id="default_html"><!-- あなたの解答 -->
 <div>
-<p class="first"></p>
-<p class="second"></p>
-<p class="third"></p>
-<p class="fourth"></p>
+	<p class="first"></p>
+	<p class="second"></p>
+	<p class="third"></p>
+	<p class="fourth"></p>
 </div>
 </script>
 <script>

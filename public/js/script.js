@@ -1,9 +1,10 @@
 function reverseMd() {
   var arr = arguments[1].split(/\r?\n/);
   arr.pop();
-  arr[0] = "\t"+arr[0];
-  arr[arr.length - 1] = "\t"+arr[arr.length - 1]+"\n";
-  arr = arr.join("\n");
+  arr = arr.map(function(elem,index,array){
+    return "\t" + elem + "\n";
+  });
+  arr = arr.join("");
   return "\n"+arr
     .replace(/(&lt;)/g, '<')
     .replace(/(&gt;)/g, '>')
