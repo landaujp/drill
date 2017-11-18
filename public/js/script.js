@@ -1,3 +1,16 @@
+function reverseMd() {
+  var arr = arguments[1].split(/\r?\n/);
+  arr.pop();
+  arr[0] = "\t"+arr[0];
+  arr[arr.length - 1] = "\t"+arr[arr.length - 1]+"\n";
+  arr = arr.join("\n");
+  return "\n"+arr
+    .replace(/(&lt;)/g, '<')
+    .replace(/(&gt;)/g, '>')
+    .replace(/(&quot;)/g, '"')
+    .replace(/(&#39;)/g, "'")
+    .replace(/(&amp;)/g, '&');
+}
 $( function() {
   $('#side-menu p.chapter').click(function(){
     $(this).next().toggleClass("active");
@@ -7,7 +20,8 @@ $( function() {
   var html,css,defaultHtml = '',defaultCss = '';
   var html_dom = document.getElementById('textarea_html');
   if (typeof(default_html) != "undefined") {
-    defaultHtml += default_html;
+    defaultHtml += default_html.replace(/<\/p>\r?\n<p>/g,"\n\n");
+    defaultHtml = defaultHtml.replace(/<\/p>\r?\n<pre><code>((.|\r?\n)*?)<\/code><\/pre>\r?\n<p>/g,reverseMd);
   }
   html_dom.value = defaultHtml;
   var editor_html = CodeMirror.fromTextArea(html_dom, {
@@ -23,7 +37,8 @@ $( function() {
   emmetCodeMirror(editor_html);
   var css_dom = document.getElementById('textarea_css');
   if ( typeof(default_css) != "undefined") {
-    defaultCss += default_css;
+    defaultCss += default_css.replace(/<\/p>\r?\n<p>/g,"\n\n");
+    defaultCss = defaultCss.replace(/<\/p>\r?\n<pre><code>((.|\r?\n)*?)<\/code><\/pre>\r?\n<p>/g,reverseMd);
   }
   css_dom.value = defaultCss;
   var editor_css = CodeMirror.fromTextArea(css_dom, {
@@ -63,7 +78,7 @@ $( function() {
     localStorage.setItem(local_html_key, html);
     localStorage.setItem(local_css_key, css);
   }
-  // render();
+  render();
   $('.reset-html').click(function(){
     if ( window.confirm('htmlをリセットしますか？')) {
       editor_html.getDoc().setValue(defaultHtml);

@@ -10,7 +10,7 @@ style.css
 
 ```css
 
- #title {
+#title {
     font-size:30px;
 }
 ```
@@ -36,15 +36,16 @@ index.html
 ### 解説
 
 #### idとは
-htmlタグに設定できる**ラベル**のようなものです。
+htmlタグに設定できる**ラベル**のようなものです。  
 classと同じようにidを通じてCSSをHTMLに対応させることができます。
 
 
 #### HTMLタグにclassの設定の仕方
-HTMLタグのid属性に好きなid名を記述します。ただし、id名は数字から始めることはできません。
+HTMLタグのid属性に好きなid名を記述します。ただし、id名は数字から始めることはできません。  
+`<p id="[id名]"></p>`
 
 #### CSSでidの設定の仕方
-`#(シャープ)id名 { font-size: 30px; }`という風に、id名の前に「#(シャープ)」をつけます。
+`#(シャープ)id名 { font-size: 30px; }`という風に、id名の前に「#(シャープ)」をつけます。  
 HTMLタグ名のところをシャープ＋id名に入れ替えただけです。
 
 
@@ -97,16 +98,14 @@ index.html
 </html>
 ```
 
-<script language="heredocument" id="default_html">
-<!-- pタグにidを付与してCSSを適応してください -->
+<script language="heredocument" id="default_html"><!-- pタグにidを付与してCSSを適応してください -->
 <p>style属性で文字の色と大きさを変更してみる</p>
 </script>
 <script>
 var default_html = document.getElementById("default_html").text;
 </script>
 
-<script language="heredocument" id="default_css">
-/\* subject idの記述 \*/
+<script language="heredocument" id="default_css">/\* subject idの記述 \*/
 </script>
 <script>
 var default_css = document.getElementById("default_css").text;
