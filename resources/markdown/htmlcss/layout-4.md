@@ -3,7 +3,7 @@
 ### 問
 この図をHTMLとCSSで表現してください。  
 
-![](/img/1/layout_4.png)
+[![](/img/1/layout_4.png)](/img/1/layout_4.png)
 
 
 ### 解答
